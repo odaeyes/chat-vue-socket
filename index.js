@@ -19,4 +19,5 @@ io.on('connection', function(socket) {
     socket.on('SEND_MESSAGE', function(data) {
         io.emit('MESSAGE', data)
     });
+    socket.emit('ROOM',socket.id)
 });
